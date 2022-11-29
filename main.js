@@ -1,3 +1,6 @@
+console.log('funcionei')
+let cardDelay = -.3;
+
 document.querySelector('#cards').innerHTML = 
     createCard("20/11", "domingo",
     createGame("13:00", "Qatar", "Ecuador"))
@@ -71,11 +74,9 @@ document.querySelector('#cards').innerHTML =
     createGame("12:00", "South Korea", "Portugal") +
     createGame("12:00", "Ghana", "Uruguay") +
     createGame("16:00", "Serbia", "Switzerland") +
-    createGame("16:00", "Cameroon", "Brazil"));
+    createGame("16:00", "Cameroon", "Brazil"))
 
-let cardDelay = -.3;
 function createCard(date, day, games) {
-
     cardDelay = cardDelay + 0.3;
     return `
     <div class="card" style="animation-delay: ${cardDelay}s">
