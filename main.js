@@ -1,6 +1,28 @@
 console.log('funcionei')
 let cardDelay = -.3;
 
+function createCard(date, day, games) {
+    cardDelay = cardDelay + 0.3;
+    return `
+    <div class="card" style="animation-delay: ${cardDelay}s">
+        <h2>${date} <span>${day}</span></h2>
+        <ul>
+        ${games}
+        </ul>
+    </div>
+    `
+}
+
+function createGame(hour, player1, player2) {
+    return `
+    <li>
+        <img src="./assets/icon=${player1}.svg" alt="${player1}">
+        <span>${hour}</span>
+        <img src="./assets/icon=${player2}.svg" alt="${player2}">
+    </li>
+    `
+}
+
 document.querySelector('#cards').innerHTML = 
     createCard("20/11", "domingo",
     createGame("13:00", "Qatar", "Ecuador"))
@@ -75,25 +97,3 @@ document.querySelector('#cards').innerHTML =
     createGame("12:00", "Ghana", "Uruguay") +
     createGame("16:00", "Serbia", "Switzerland") +
     createGame("16:00", "Cameroon", "Brazil"))
-
-function createCard(date, day, games) {
-    cardDelay = cardDelay + 0.3;
-    return `
-    <div class="card" style="animation-delay: ${cardDelay}s">
-        <h2>${date} <span>${day}</span></h2>
-        <ul>
-        ${games}
-        </ul>
-    </div>
-    `
-}
-
-function createGame(hour, player1, player2) {
-    return `
-    <li>
-        <img src="./assets/icon=${player1}.svg" alt="${player1}">
-        <span>${hour}</span>
-        <img src="./assets/icon=${player2}.svg" alt="${player2}">
-    </li>
-    `
-}
