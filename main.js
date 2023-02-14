@@ -16,9 +16,9 @@ function createCard(date, day, games) {
 function createGame(hour, player1, player2) {
     return `
     <li>
-        <img src="https://raw.githubusercontent.com/wesley-azevedo/calendario-copa-22/4bb56bd3263da75517d7e9e0f27aa07c0034e434/assets/icon%3{player1}.svg" alt="${player1}">
+        <img src="../assets/icon=${player1}.svg" alt="${player1}">
         <span>${hour}</span>
-        <img src="https://raw.githubusercontent.com/wesley-azevedo/calendario-copa-22/4bb56bd3263da75517d7e9e0f27aa07c0034e434/assets/icon%3{player2}.svg" alt="${player2}">
+        <img src="../assets/icon=${player2}.svg" alt="${player2}">
     </li>
     `
 }
